@@ -1,6 +1,14 @@
-# AngularTourOfHeroes
+# AngularTourOfHeroes 예제 스터디
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+
+## Memo
+'Not using the local TSLint version found for '../~.component.ts'. To enable code execution from the current workspace you must enable workspace library execution.' 에러 발생
+https://stackoverflow.com/questions/65228384/tslint-extension-throwing-errors-in-my-angular-application-running-in-visual-stu
+참고하여 해결
+
+
+
 
 ## Development server
 
