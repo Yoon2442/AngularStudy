@@ -1,6 +1,7 @@
 <h2>My Heroes</h2>
 <ul class="heroes">
 
+
   <!--ngFor는 항목을 반복하는 Angular 디렉티브, 목록에 있는 항목마다 호스트 엘리먼트를 반복한다.-->
   <!--selectedHero와 같은 히어로가 있는 줄에 selected CSS 클래스가 추가된다. 
     그리고 컴포넌트 프로퍼티에 있는 값과 다르다면 이 클래스가 제거된다.-->
@@ -12,16 +13,19 @@
   </li>
 </ul>
 
+<!--
 <div *ngIf="selectedHero">
-  <!--selectedHero의 값이 undefined 이면 ngIf는 히어로의 상세정보를 표현하는 부분을 DOM에서 제거한다
+  selectedHero의 값이 undefined 이면 ngIf는 히어로의 상세정보를 표현하는 부분을 DOM에서 제거한다
   그래서 selectedHero를 바인딩 하지 못하는 에러는 발생하지 않는다.
 그리고 사용자가 히어로를 선택하면 selectedHero의 값이 비어있지 않기 때문에 ngIf가 히어로의 상세정보를
-표현하는 부분을 DOM에 추가한다.-->
+표현하는 부분을 DOM에 추가한다.
   <h2>{{selectedHero.name|uppercase}} Details</h2>
   <div><span>id: </span>{{selectedHero.id}}</div>
   <div>
     <label for="hero-name">Hero name:</label>
     <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
   </div>
-
 </div>
+-->
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
