@@ -3,12 +3,13 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
 ## Memo
-'Not using the local TSLint version found for '../~.component.ts'. To enable code execution from the current workspace you must enable workspace library execution.' 에러 발생
-https://stackoverflow.com/questions/65228384/tslint-extension-throwing-errors-in-my-angular-application-running-in-visual-stu
-참고하여 해결
 
 ### 1. 히어로 에디터
 ### 2. 목록 표시하기
+
+'Not using the local TSLint version found for '../~.component.ts'. To enable code execution from the current workspace you must enable workspace library execution.' 에러 발생
+https://stackoverflow.com/questions/65228384/tslint-extension-throwing-errors-in-my-angular-application-running-in-visual-stu
+참고하여 해결
 ### 3. 기능 컴포넌트 만들기
 ### 4. 서비스 추가하기
 
