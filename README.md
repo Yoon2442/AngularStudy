@@ -1,4 +1,4 @@
-# AngularTourOfHeroes 예제 스터디
+# Angular-Tour-Of-Heroes 예제 스터디
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
