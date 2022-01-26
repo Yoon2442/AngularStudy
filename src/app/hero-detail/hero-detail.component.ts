@@ -12,7 +12,7 @@ import { Hero } from '../hero';
 
 export class HeroDetailComponent implements OnInit {
 
-  //오류 난 부분 @Input 구문을 export 밖에 놨음
+  // 오류 난 부분 @Input 구문을 export 밖에 놨음
   @Input() hero?: Hero;
 
   constructor() { }
