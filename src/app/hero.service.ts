@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
+// tslint:disable-next-line: import-blacklist
+import { Observable } from 'rxjs';
+import { of } from 'rxjs/observable/of';
+
+import { MessageService } from './message.service';
 
 
 @Injectable()
@@ -12,10 +17,12 @@ import { HEROES } from './mock-heroes';
 
 export class HeroService {
 
-  getHeroes(): Hero[] {
-    return HEROES;
-  }
+  constructor(private messageService: MessageService) { }
 
-  constructor() { }
+  getHeroes(): Observable<Hero[]> {
+    const heroes = of(HEROES);
+    this.messageService.add('HeroService: fetched heroes');
+    return heroes;
+  }
 
 }
