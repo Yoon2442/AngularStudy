@@ -59,7 +59,8 @@ app.component.html 파일의 오류 발생</br>
     HeroDetailComponent,</br>
     HeroesComponent,</br>
     **MessagesComponent //추가** </br>
-  ],</br>
+  ],</br>  
+providedIn : 'root', 오류는 app.module.ts 파일에 provide에 messageservice를 추가했다.
 
 ### 5. 네비게이션 추가하기
 ### 6. 서버에서 데이터 받아오기
