@@ -63,10 +63,20 @@ app.component.html 파일의 오류 발생</br>
 providedIn : 'root', 오류는 app.module.ts 파일에 provide에 messageservice를 추가했다.
 
 ### 5. 네비게이션 추가하기
-#### 2022-01-26 오류(app.module.ts 파일 배열 추가 오류)</br>
+#### 2022-01-26 오류(app.module.ts 파일 배열 추가 오류 #1)</br>
 ![image](https://user-images.githubusercontent.com/80866883/151104343-8b184620-b51f-4745-a5c5-9c2747749b2f.png)</br>
 import 배열 중간에 라우팅 모듈이 추가되는 오류 발생
 
+#### 2022-01-26 오류(app.module.ts 파일 배열 추가 오류 #2)</br>
+![image](https://user-images.githubusercontent.com/80866883/151116708-2839fc57-a417-48ce-b73a-59e6c22c87a9.png)</br>
+![image](https://user-images.githubusercontent.com/80866883/151116788-205af32e-ce1f-43b1-bc8d-0cd4df1351ce.png)</br>
+ng generate component dashboard 명령어 실행 시 app.module.ts 파일에 import 부분과 declaration 부분에 자동으로 추가되는데 구문 오류 발생하도록 추가됨.</br>
+**놓친 부분**</br>
+![image](https://user-images.githubusercontent.com/80866883/151117574-5544d80d-9412-4cae-92dd-45f3fb830a90.png)</br>
+declaration: [ 앞에 , 가 들어가도 편집기 내에서 에러 발생 없이 컴파일 됨. 그래서 브라우저 실행 시 오류가 발생해도 몰랐다.
+
+https://angular.kr/tutorial/toh-pt5#%ED%95%84%EC%9A%94%EC%97%86%EB%8A%94-%EC%BD%94%EB%93%9C-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0-%EC%83%9D%EB%9E%B5-%EA%B0%80%EB%8A%A5
+까지 진행
 
 ### 6. 서버에서 데이터 받아오기
 
