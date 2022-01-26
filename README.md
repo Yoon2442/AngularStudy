@@ -1,6 +1,24 @@
-# AngularTourOfHeroes
+# Angular-Tour-Of-Heroes 예제 스터디
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+
+## Memo
+
+### 1. 히어로 에디터
+### 2. 목록 표시하기
+
+'Not using the local TSLint version found for '../~.component.ts'. To enable code execution from the current workspace you must enable workspace library execution.' 에러 발생
+https://stackoverflow.com/questions/65228384/tslint-extension-throwing-errors-in-my-angular-application-running-in-visual-stu
+참고하여 해결
+### 3. 기능 컴포넌트 만들기
+### 4. 서비스 추가하기
+
+2022-01-25 오류
+![image](https://user-images.githubusercontent.com/80866883/150944288-ddf23577-4704-41a9-8cee-20ee9bab717a.png)
+
+### 5. 네비게이션 추가하기
+### 6. 서버에서 데이터 받아오기
+
 
 ## Development server
 
