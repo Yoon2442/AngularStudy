@@ -63,6 +63,11 @@ app.component.html 파일의 오류 발생</br>
 providedIn : 'root', 오류는 app.module.ts 파일에 provide에 messageservice를 추가했다.
 
 ### 5. 네비게이션 추가하기
+#### 2022-01-26 오류(app.module.ts 파일 배열 추가 오류)</br>
+![image](https://user-images.githubusercontent.com/80866883/151104343-8b184620-b51f-4745-a5c5-9c2747749b2f.png)</br>
+import 배열 중간에 라우팅 모듈이 추가되는 오류 발생
+
+
 ### 6. 서버에서 데이터 받아오기
 
 
