@@ -51,7 +51,7 @@ app.component.html 파일의 오류 발생</br>
 2. If 'app-messages' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.ng</br>
 
 위 경우 app.module.ts 에 </br>
-import { MessagesComponent } from './messages/messages.component'; 추가 </br>
+**import { MessagesComponent } from './messages/messages.component'; //추가 </br>**
 
 @NgModule({</br>
   declarations: [</br>
