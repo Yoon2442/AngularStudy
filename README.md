@@ -75,6 +75,9 @@ ng generate component dashboard 명령어 실행 시 app.module.ts 파일에 imp
 ![image](https://user-images.githubusercontent.com/80866883/151117574-5544d80d-9412-4cae-92dd-45f3fb830a90.png)</br>
 declaration: [ 앞에 , 가 들어가도 편집기 내에서 에러 발생 없이 컴파일 됨. 그래서 브라우저 실행 시 오류가 발생해도 몰랐다.
 
+https://angular.kr/tutorial/toh-pt5#%ED%95%84%EC%9A%94%EC%97%86%EB%8A%94-%EC%BD%94%EB%93%9C-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0-%EC%83%9D%EB%9E%B5-%EA%B0%80%EB%8A%A5
+까지 진행
+
 ### 6. 서버에서 데이터 받아오기
 
 
