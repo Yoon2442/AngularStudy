@@ -19,8 +19,8 @@ https://stackoverflow.com/questions/65228384/tslint-extension-throwing-errors-in
 2022-01-26 오류
 ![image](https://user-images.githubusercontent.com/80866883/151084614-19ea4b0d-2be6-4513-a3e2-92031383951f.png)
 
-ng generate service 명령어 실행 시 오류
-Error: Cannot read property 'split' of undefined
+ng generate service 명령어 실행 시 오류</br>
+Error: Cannot read property 'split' of undefined</br>
 Cannot read property 'split' of undefined
 
 ### 5. 네비게이션 추가하기
