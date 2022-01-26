@@ -16,10 +16,10 @@ https://stackoverflow.com/questions/65228384/tslint-extension-throwing-errors-in
 2022-01-25 오류
 ![image](https://user-images.githubusercontent.com/80866883/150944288-ddf23577-4704-41a9-8cee-20ee9bab717a.png)
 
-2022-01-26 오류\n
-![image](https://user-images.githubusercontent.com/80866883/151084311-c51f1419-9336-4c8a-81ee-21cb2c9e9b35.png)\n
-ng generate service 명령어 실행 시 오류
+2022-01-26 오류
+![image](https://user-images.githubusercontent.com/80866883/151084614-19ea4b0d-2be6-4513-a3e2-92031383951f.png)
 
+ng generate service 명령어 실행 시 오류
 Error: Cannot read property 'split' of undefined
 Cannot read property 'split' of undefined
 
