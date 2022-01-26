@@ -14,10 +14,12 @@ import { HeroService } from './hero.service'; // 2022-01-26 수정
 
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessageService } from './message.service';
 
 @NgModule({
   declarations: [
+    DashboardComponent,
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
