@@ -32,13 +32,35 @@ AppComponent.html:2 ERROR Error: StaticInjectorError(AppModule)[HeroesComponent 
 @Injectable({</br>
   providedIn: 'root',</br>
 })</br>
-그런데 0개의 인수가 필요한데 1개를 가져왔습니다.ts(2554) 라는 오류가 발생했다.
-
+0개의 인수가 필요한데 1개를 가져왔습니다.ts(2554) 라는 오류가 발생했다.
 그래서 app.module.ts 파일에</br>
 import { HeroService } from './hero.service'; </br>
 providers: [HeroService], </br>
 을 추가했다.
 
+#### 2022-01-26 옵저버블 구독
+https://angular.kr/tutorial/toh-pt4#heroescomponent-%EC%97%90%EC%84%9C-%EC%98%B5%EC%A0%80%EB%B2%84%EB%B8%94-%EA%B5%AC%EB%8F%85%ED%95%98%EA%B8%B0
+
+#### 2022-01-26 오류(메시지 표시하기)</br>
+https://angular.kr/tutorial/toh-pt4#%EB%A9%94%EC%8B%9C%EC%A7%80-%ED%91%9C%EC%8B%9C%ED%95%98%EA%B8%B0</br>
+ng generate component messages 명령 실행 시 messages 폴더 생성 및 폴더 하위 파일 생성됨</br>
+app.component.html 파일의 오류 발생</br>
+<app-messages></app-messages></br>
+'app-messages' is not a known element:</br>
+1. If 'app-messages' is an Angular component, then verify that it is part of this module.</br>
+2. If 'app-messages' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.ng</br>
+
+위 경우 app.module.ts 에 </br>
+**import { MessagesComponent } from './messages/messages.component'; //추가 </br>**
+
+@NgModule({</br>
+  declarations: [</br>
+    AppComponent,</br>
+    HeroDetailComponent,</br>
+    HeroesComponent,</br>
+    **MessagesComponent //추가** </br>
+  ],</br>  
+providedIn : 'root', 오류는 app.module.ts 파일에 provide에 messageservice를 추가했다.
 
 ### 5. 네비게이션 추가하기
 ### 6. 서버에서 데이터 받아오기
