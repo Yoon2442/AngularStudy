@@ -103,7 +103,7 @@ To enable code execution from the current workspace you must enable workspace li
 > node_modules/@angular/core/core.d.ts(12721,95): error TS1128: Declaration or statement expected.
 > node_modules/@angular/core/core.d.ts(12721,96): error TS1128: Declaration or statement expected.
 >   ```
-> VScode 탐색기에서 `node_moduels`를 모두 제거하고 `npm install` 명령을 실행 한 뒤 정상적으로 컴파일 됐다.
+> VScode 탐색기에서 `node_moduels`를 모두 제거하고 `npm install` 명령을 실행 한 뒤 정상적으로 컴파일 됐다. [참고](https://stackoverflow.com/questions/54434333/error-ts1005-expected-typescript-angular-6-for-first-build-error-rxjs-insi)
 
 ## Development server
 
