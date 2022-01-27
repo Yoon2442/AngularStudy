@@ -34,7 +34,7 @@ To enable code execution from the current workspace you must enable workspace li
 >     NullInjectorError: No provider for HeroService!
 > ```    
 > 참고한 [문서](https://angular.kr/tutorial/toh-pt4#%EB%A9%94%EC%8B%9C%EC%A7%80-%ED%91%9C%EC%8B%9C%ED%95%98%EA%B8%B0)에는 hero.service.ts 파일의 @Injectable 데코레이터에 아래와 같이 추가하라고 되어있었다.</br>
-> ```
+> ```typescript
 > @Injectable({
 >   providedIn: 'root',
 > })
@@ -56,7 +56,7 @@ To enable code execution from the current workspace you must enable workspace li
 > ```
 > 위 경우 app.module.ts 에 </br>
 > **`import { MessagesComponent } from './messages/messages.component';` 추가 </br>**
-> ```
+> ```typescript
 > @NgModule({
 >   declarations: [
 >     AppComponent,
@@ -91,7 +91,7 @@ To enable code execution from the current workspace you must enable workspace li
 * 여러 컴포넌트에 사용하는 로직을 중복해서 구현하지 않고 HeroService로 옮겨서 재사용할 수 있도록 변경
 
 ### 6. 서버에서 데이터 받아오기
-  > #### 2022-01-27 오류
+  > #### 2022-01-27 오류 #1
   > ```
   > ERROR in node_modules/@angular/core/core.d.ts(264,63): error TS1005: '>' expected.
 > node_modules/@angular/core/core.d.ts(264,90): error TS1005: '(' expected.   
@@ -104,6 +104,15 @@ To enable code execution from the current workspace you must enable workspace li
 > node_modules/@angular/core/core.d.ts(12721,96): error TS1128: Declaration or statement expected.
 >   ```
 > VScode 탐색기에서 `node_moduels`를 모두 제거하고 `npm install` 명령을 실행 한 뒤 정상적으로 컴파일 됐다.   [[참고]](https://stackoverflow.com/questions/54434333/error-ts1005-expected-typescript-angular-6-for-first-build-error-rxjs-insi)
+  
+  > #### 2022-01-27 오류 #2
+  > Angular 튜토리얼 중 서비스 추가하기의 `@Injectable()` 데코레이터에서 발생한 오류 때문에 진행 못했던 이유가 Angular의 버전 문제였다.
+  > ```typescript
+  > @Injectable({
+  > providedIn: 'root',
+> })
+  > ```
+  > 위 코드는 Angular 6의 새로운 기능이므로 내 환경에서 정상 작동하지 않았다. 나는 Angular cli 버전이 1.6.6 이었다.
 
 ## Development server
 
