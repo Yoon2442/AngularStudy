@@ -115,7 +115,8 @@ To enable code execution from the current workspace you must enable workspace li
   > 위 코드는 Angular 6의 새로운 기능이므로 내 환경에서 정상 작동하지 않았다. 나는 Angular cli 버전이 1.6.6 이었다. [[참고 사이트]](https://stackoverflow.com/questions/50307628/angular-injectable-decorator-expected-0-arguments-but-got-1)   
   > 그래서 NodeJS부터 삭제 후 다시 설치했다. Python과 VisualStudio의 추가기능? 들도 선택사항에 체크해서 함께 설치했다. [[참고 사이트]](https://www.a-mean-blog.com/ko/blog/Angular/_/Angular-%EC%84%A4%EC%B9%98-%EB%B0%8F-Angular-CLI%EB%A1%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95)   
   > Angular CLI가 전역으로 설치돼서 기존 프로젝트(로컬)에 적용을 못해서 [참고 사이트](https://stackoverflow.com/questions/44525746/global-angular-cli-version-greater-than-local-version/48696897)를 확인하여 해결했다.
-  > 
+  > Angular CLI 업데이트 후 기존 로컬 폴더에서 컴파일 진행할 경우 에러가 발생하여 새 프로젝트를 만든 후 `src`폴더를 복사하여 다시 진행했다.
+  > 업그레이드한 버전으로 컴파일 진행했을 때 모듈이 없어서 오류가 발생하여 `npm install --save core-js@^2.5.0` 명령어로 모듈을 설치했다.  [[참고 사이트]]  
 
 ## Development server
 
