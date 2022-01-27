@@ -52,14 +52,15 @@ app.component.html 파일의 오류 발생</br>
 
 위 경우 app.module.ts 에 </br>
 **import { MessagesComponent } from './messages/messages.component'; //추가 </br>**
-
-@NgModule({</br>
-  declarations: [</br>
-    AppComponent,</br>
-    HeroDetailComponent,</br>
-    HeroesComponent,</br>
-    **MessagesComponent //추가** </br>
-  ],</br>  
+```
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeroDetailComponent,
+    HeroesComponent,
+    MessagesComponent //추가
+  ],
+```
 providedIn : 'root', 오류는 app.module.ts 파일에 provide에 messageservice를 추가했다.
 
 ### 5. 네비게이션 추가하기
@@ -75,8 +76,15 @@ ng generate component dashboard 명령어 실행 시 app.module.ts 파일에 imp
 ![image](https://user-images.githubusercontent.com/80866883/151117574-5544d80d-9412-4cae-92dd-45f3fb830a90.png)</br>
 declaration: [ 앞에 , 가 들어가도 편집기 내에서 에러 발생 없이 컴파일 됨. 그래서 브라우저 실행 시 오류가 발생해도 몰랐다.
 
-https://angular.kr/tutorial/toh-pt5#%ED%95%84%EC%9A%94%EC%97%86%EB%8A%94-%EC%BD%94%EB%93%9C-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0-%EC%83%9D%EB%9E%B5-%EA%B0%80%EB%8A%A5
-까지 진행
+#### 정리
+* 화면에 표시하는 컴포넌트를 전환하기 위해 Angular 라우터 추가.
+* AppComponent에 <a> 링크와 <router-outlet>을 추가하여 네비게이션 동작을 실행
+* 라우터 설정은 AppRoutingModule에 정의
+* 간단한 라우팅 규칙부터 리다이렉트 라우팅 규칙, 라우팅 변수가 있는 라우팅 규칙을 정의
+* 앵커 엘리먼트에 routerLink 디렉티브를 적용
+* 히어로 목록/상세정보 화면은 결합도가 높았지만 라우터를 활용해서 결합도를 낮추도록 리팩토링
+* 히어로 목록 화면에서 사용자가 선택한 히어로의 정보를 히어로 상세정보 화면으로 전달하기 위해 라우터 링크 배열을 활용
+* 여러 컴포넌트에 사용하는 로직을 중복해서 구현하지 않고 HeroService로 옮겨서 재사용할 수 있도록 변경
 
 ### 6. 서버에서 데이터 받아오기
 
