@@ -6,75 +6,79 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### 1. 히어로 에디터
 ### 2. 목록 표시하기
-
-'Not using the local TSLint version found for '../~.component.ts'. To enable code execution from the current workspace you must enable workspace library execution.' 에러 발생</br>
-https://stackoverflow.com/questions/65228384/tslint-extension-throwing-errors-in-my-angular-application-running-in-visual-stu</br>참고하여 해결
+* 에러 발생
+```
+'Not using the local TSLint version found for '../~.component.ts'. 
+To enable code execution from the current workspace you must enable workspace library execution.'
+```
+* [Stackoverflow](https://stackoverflow.com/questions/65228384/tslint-extension-throwing-errors-in-my-angular-application-running-in-visual-stu) 참고하여 해결
 ### 3. 기능 컴포넌트 만들기
 ### 4. 서비스 추가하기
 
-#### 2022-01-25 오류
-![image](https://user-images.githubusercontent.com/80866883/150944288-ddf23577-4704-41a9-8cee-20ee9bab717a.png)
+> #### 2022-01-25 오류
+> ![image](https://user-images.githubusercontent.com/80866883/150944288-ddf23577-4704-41a9-8cee-20ee9bab717a.png)
 
-#### 2022-01-26 오류</br>
-![image](https://user-images.githubusercontent.com/80866883/151084808-63967f7a-dd4b-4319-a660-d77e5d9014e3.png)</br>
-ng generate service 명령어 실행 시 오류</br>
-Error: Cannot read property 'split' of undefined</br>
-Cannot read property 'split' of undefined
--> 해결 ng generate service [이름] 이 와야한다.
+> #### 2022-01-26 오류</br>
+> ![image](https://user-images.githubusercontent.com/80866883/151084808-63967f7a-dd4b-4319-a660-d77e5d9014e3.png)</br>   `ng generate service` 명령어 실행 시 오류   
+> ```
+> Error: Cannot read property 'split' of undefined
+> Cannot read property 'split' of undefined
+> ```
+> 해결 ->  `ng generate service [이름]` 이 와야한다.
 
-#### 2022-01-26 오류</br>
-![image](https://user-images.githubusercontent.com/80866883/151089337-23f0c964-cca1-4d79-9402-4e3cc8fdad79.png)</br>
-AppComponent.html:2 ERROR Error: StaticInjectorError(AppModule)[HeroesComponent -> HeroService]: </br>
-  StaticInjectorError(Platform: core)[HeroesComponent -> HeroService]: </br>
-    NullInjectorError: No provider for HeroService!</br>
-    
-참고한 문서 https://angular.kr/tutorial/toh-pt4#%EB%A9%94%EC%8B%9C%EC%A7%80-%ED%91%9C%EC%8B%9C%ED%95%98%EA%B8%B0 에는 hero.service.ts 파일의 @Injectable 데코레이터에 아래와 같이 추가하라고 되어있었다.</br>
-@Injectable({</br>
-  providedIn: 'root',</br>
-})</br>
-0개의 인수가 필요한데 1개를 가져왔습니다.ts(2554) 라는 오류가 발생했다.
-그래서 app.module.ts 파일에</br>
-import { HeroService } from './hero.service'; </br>
-providers: [HeroService], </br>
-을 추가했다.
+> #### 2022-01-26 오류</br>
+> ![image](https://user-images.githubusercontent.com/80866883/151089337-23f0c964-cca1-4d79-9402-4e3cc8fdad79.png)</br>   
+> ```
+> AppComponent.html:2 ERROR Error: StaticInjectorError(AppModule)[HeroesComponent -> HeroService]:
+>   StaticInjectorError(Platform: core)[HeroesComponent -> HeroService]:
+>     NullInjectorError: No provider for HeroService!
+> ```    
+> 참고한 [문서](https://angular.kr/tutorial/toh-pt4#%EB%A9%94%EC%8B%9C%EC%A7%80-%ED%91%9C%EC%8B%9C%ED%95%98%EA%B8%B0)에는 hero.service.ts 파일의 @Injectable 데코레이터에 아래와 같이 추가하라고 되어있었다.</br>
+> ```
+> @Injectable({
+>   providedIn: 'root',
+> })
+> ```
+> `0개의 인수가 필요한데 1개를 가져왔습니다.ts(2554)` 라는 오류가 발생했다.
+> 그래서 app.module.ts 파일에</br>
+> `import { HeroService } from './hero.service';` 와 `providers: [HeroService],` 를 각각 추가했다.
 
-#### 2022-01-26 옵저버블 구독
-https://angular.kr/tutorial/toh-pt4#heroescomponent-%EC%97%90%EC%84%9C-%EC%98%B5%EC%A0%80%EB%B2%84%EB%B8%94-%EA%B5%AC%EB%8F%85%ED%95%98%EA%B8%B0
+> #### 2022-01-26 [옵저버블 구독](https://angular.kr/tutorial/toh-pt4#heroescomponent-%EC%97%90%EC%84%9C-%EC%98%B5%EC%A0%80%EB%B2%84%EB%B8%94-%EA%B5%AC%EB%8F%85%ED%95%98%EA%B8%B0)
 
-#### 2022-01-26 오류(메시지 표시하기)</br>
-https://angular.kr/tutorial/toh-pt4#%EB%A9%94%EC%8B%9C%EC%A7%80-%ED%91%9C%EC%8B%9C%ED%95%98%EA%B8%B0</br>
-ng generate component messages 명령 실행 시 messages 폴더 생성 및 폴더 하위 파일 생성됨</br>
-app.component.html 파일의 오류 발생</br>
-<app-messages></app-messages></br>
-'app-messages' is not a known element:</br>
-1. If 'app-messages' is an Angular component, then verify that it is part of this module.</br>
-2. If 'app-messages' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.ng</br>
-
-위 경우 app.module.ts 에 </br>
-**import { MessagesComponent } from './messages/messages.component'; //추가 </br>**
-```
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeroDetailComponent,
-    HeroesComponent,
-    MessagesComponent //추가
-  ],
-```
-providedIn : 'root', 오류는 app.module.ts 파일에 provide에 messageservice를 추가했다.
+> #### 2022-01-26 오류[(메시지 표시하기)](https://angular.kr/tutorial/toh-pt4#%EB%A9%94%EC%8B%9C%EC%A7%80-%ED%91%9C%EC%8B%9C%ED%95%98%EA%B8%B0)
+> `ng generate component messages` 명령 실행 시 messages 폴더 생성 및 폴더 하위 파일 생성됨   
+> app.component.html 파일의 아래와 같은 에러 발생</br>
+> ```
+> <app-messages></app-messages>
+> 'app-messages' is not a known element:
+> 1. If 'app-messages' is an Angular component, then verify that it is part of this module.</br>
+> 2. If 'app-messages' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to > suppress this message.ng
+> ```
+> 위 경우 app.module.ts 에 </br>
+> **`import { MessagesComponent } from './messages/messages.component';` 추가 </br>**
+> ```
+> @NgModule({
+>   declarations: [
+>     AppComponent,
+>     HeroDetailComponent,
+>     HeroesComponent,
+>     MessagesComponent //추가
+>   ],
+> ```
+> `providedIn : 'root',` 코드를 넣어서 발생한 오류는 app.module.ts 파일의 provide에 messageservice를 추가했다.
 
 ### 5. 네비게이션 추가하기
-#### 2022-01-26 오류(app.module.ts 파일 배열 추가 오류 #1)</br>
-![image](https://user-images.githubusercontent.com/80866883/151104343-8b184620-b51f-4745-a5c5-9c2747749b2f.png)</br>
-import 배열 중간에 라우팅 모듈이 추가되는 오류 발생
+> #### 2022-01-26 오류(app.module.ts 파일 배열 추가 오류 #1)</br>
+> ![image](https://user-images.githubusercontent.com/80866883/151104343-8b184620-b51f-4745-a5c5-9c2747749b2f.png)</br>
+> import 배열 중간에 라우팅 모듈이 추가되는 오류 발생
 
-#### 2022-01-26 오류(app.module.ts 파일 배열 추가 오류 #2)</br>
-![image](https://user-images.githubusercontent.com/80866883/151116708-2839fc57-a417-48ce-b73a-59e6c22c87a9.png)</br>
-![image](https://user-images.githubusercontent.com/80866883/151116788-205af32e-ce1f-43b1-bc8d-0cd4df1351ce.png)</br>
-ng generate component dashboard 명령어 실행 시 app.module.ts 파일에 import 부분과 declaration 부분에 자동으로 추가되는데 구문 오류 발생하도록 추가됨.</br>
-**놓친 부분**</br>
-![image](https://user-images.githubusercontent.com/80866883/151117574-5544d80d-9412-4cae-92dd-45f3fb830a90.png)</br>
-declaration: [ 앞에 , 가 들어가도 편집기 내에서 에러 발생 없이 컴파일 됨. 그래서 브라우저 실행 시 오류가 발생해도 몰랐다.
+> #### 2022-01-26 오류(app.module.ts 파일 배열 추가 오류 #2)</br>
+> ![image](https://user-images.githubusercontent.com/80866883/151116708-2839fc57-a417-48ce-b73a-59e6c22c87a9.png)</br>
+> ![image](https://user-images.githubusercontent.com/80866883/151116788-205af32e-ce1f-43b1-bc8d-0cd4df1351ce.png)</br>
+> `ng generate component dashboard` 명령어 실행 시 app.module.ts 파일에 `import` 부분과 `declaration` 부분에 자동으로 추가되는데 구문 오류 발생하도록 추가됨.</br>   
+> **놓친 부분**</br>
+> ![image](https://user-images.githubusercontent.com/80866883/151117574-5544d80d-9412-4cae-92dd-45f3fb830a90.png)</br>
+> `declaration: [` 앞에 , 가 들어가도 편집기 내에서 에러 발생 없이 컴파일 됨. 그래서 브라우저 실행 시 오류가 발생해도 몰랐다.
 
 #### 정리
 * 화면에 표시하는 컴포넌트를 전환하기 위해 Angular 라우터 추가.
