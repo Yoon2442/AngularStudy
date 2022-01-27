@@ -91,7 +91,19 @@ To enable code execution from the current workspace you must enable workspace li
 * 여러 컴포넌트에 사용하는 로직을 중복해서 구현하지 않고 HeroService로 옮겨서 재사용할 수 있도록 변경
 
 ### 6. 서버에서 데이터 받아오기
-
+  > #### 2022-01-27 오류
+  > ```
+  > ERROR in node_modules/@angular/core/core.d.ts(264,63): error TS1005: '>' expected.
+> node_modules/@angular/core/core.d.ts(264,90): error TS1005: '(' expected.   
+> node_modules/@angular/core/core.d.ts(264,109): error TS1005: '(' expected.  
+> node_modules/@angular/core/core.d.ts(264,115): error TS1109: Expression expected.
+> node_modules/@angular/core/core.d.ts(264,119): error TS1109: Expression expected.
+> node_modules/@angular/core/core.d.ts(12721,86): error TS1110: Type expected.node_modules/@angular/core/core.d.ts(12721,92): error TS1005: '=' expected. 
+> node_modules/@angular/core/core.d.ts(12721,94): error TS1005: ')' expected. 
+> node_modules/@angular/core/core.d.ts(12721,95): error TS1128: Declaration or statement expected.
+> node_modules/@angular/core/core.d.ts(12721,96): error TS1128: Declaration or statement expected.
+>   ```
+> VScode 탐색기에서 `node_moduels`를 모두 제거하고 `npm install` 명령을 실행 한 뒤 정상적으로 컴파일 됐다.
 
 ## Development server
 
